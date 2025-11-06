@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm Định hướng Ngành | FPT Polytechnic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://caodang.fpt.edu.vn/wp-content/uploads/logo-3.png" alt="FPT Polytechnic Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="index.html">Trang chủ</a>
+                <a href="#quiz">Trắc nghiệm</a>
+                <a href="#result-card">Kết quả</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="quiz-hero">
+        <div class="container">
+            <h2>Trắc Nghiệm Định Hướng Ngành CNTT</h2>
+            <p>Trả lời 17 câu hỏi để khám phá bạn hợp với Thiết kế Website, Ứng dụng Phần mềm hay Trí tuệ Nhân tạo.</p>
+
+            <!-- Progress Section -->
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span class="progress-text">Tiến độ: <span id="progress-count">0</span>/17 câu</span>
+                    <span class="progress-percentage" id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="quiz" class="quiz-section">
+            <div class="container">
+                <form id="quiz-form" class="quiz-form">
+                    <fieldset class="question-card" data-question="q1">
+                        <legend><span class="q-number">1</span> Khi dùng một website, điều gì làm bạn chú ý nhất?</legend>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="WEB">
+                                <span class="option-content">
+                                    <span class="option-icon">🎨</span>
+                                    <span class="option-text">Bố cục, màu sắc, font chữ và cảm giác "đẹp" hay "xấu"</span>
+                                    <span class="option-badge web-badge">WEB</span>
+                                </span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="UDPM">
+                                <span class="option-content">
+                                    <span class="option-icon">⚡</span>
+                                    <span class="option-text">Tốc độ load trang, các nút bấm có hoạt động mượt mà không</span>
+                                    <span class="option-badge udpm-badge">UDPM</span>
+                                </span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="AI">
+                                <span class="option-content">
+                                    <span class="option-icon">🤖</span>
+                                    <span class="option-text">Cách nó đoán được ý và đề xuất nội dung tôi có thể sẽ thích</span>
+                                    <span class="option-badge ai-badge">AI</span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q2">
+                        <legend>Câu 2: Bạn thích giải quyết vấn đề nào hơn?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q2" value="WEB">
+                                (A) Làm thế nào để người dùng tìm thấy thông tin dễ nhất trên màn hình? (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="UDPM">
+                                (B) Làm thế nào để hệ thống xử lý 1000 đơn hàng cùng lúc mà không sập? (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="AI">
+                                (C) Làm thế nào để dự đoán 1000 người này sẽ mua gì tiếp theo? (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q3">
+                        <legend>Câu 3: Khi nhìn một bức tranh lộn xộn, bạn nghĩ gì?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q3" value="WEB">
+                                (A) "Khó chịu thật, tôi muốn sắp xếp lại mọi thứ cho cân đối và hài hòa." (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="UDPM">
+                                (B) "Lộn xộn cũng không sao, miễn là tôi tìm được thứ tôi cần." (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="AI">
+                                (C) "Tôi tò mò muốn tìm quy luật hoặc 'dữ liệu' ẩn sau sự lộn xộn này." (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q4">
+                        <legend>Câu 4: Bạn thích xây dựng thứ gì?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q4" value="WEB">
+                                (A) Một "ngôi nhà" (website) có mặt tiền đẹp, nội thất ấn tượng. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="UDPM">
+                                (B) "Nền móng" và "hệ thống điện nước" (cơ sở dữ liệu) vững chắc cho ngôi nhà. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="AI">
+                                (C) Một "quản gia thông minh" có thể tự học thói quen của chủ nhà. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q5">
+                        <legend>Câu 5: Khi làm việc với dữ liệu (data), bạn thấy gì?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q5" value="WEB">
+                                (A) Tôi thấy... hơi khô khan. Tôi thích làm việc với hình ảnh, con người hơn. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="UDPM">
+                                (B) Các bảng dữ liệu cần được sắp xếp logic, lưu trữ an toàn và truy xuất nhanh. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="AI">
+                                (C) Các con số biết nói! Tôi muốn phân tích chúng để tìm ra các xu hướng ẩn. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q6">
+                        <legend>Câu 6: Phong cách làm việc của bạn là:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q6" value="WEB">
+                                (A) Sáng tạo, linh hoạt, thích thử nghiệm nhiều bố cục, màu sắc mới. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="UDPM">
+                                (B) Cẩn thận, logic, tuân thủ quy trình, đảm bảo mọi thứ chạy đúng từng bước. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="AI">
+                                (C) Kiên nhẫn, thích nghiên cứu, chấp nhận thử-và-sai nhiều lần để tìm ra mô hình tốt nhất. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q7">
+                        <legend>Câu 7: Khi gặp một bài toán khó, bạn:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q7" value="WEB">
+                                (A) Hình dung ra sản phẩm cuối cùng sẽ trông như thế nào. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="UDPM">
+                                (B) Vẽ sơ đồ luồng (flowchart), chia nhỏ vấn đề thành các bước cụ thể. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="AI">
+                                (C) Tìm kiếm các tài liệu, nghiên cứu xem đã ai giải quyết vấn đề tương tự chưa. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q8">
+                        <legend>Câu 8: Bạn cảm thấy tự hào nhất khi:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q8" value="WEB">
+                                (A) Ai đó nói: "Trang web bạn làm đẹp và dễ dùng quá!" (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q8" value="UDPM">
+                                (B) Bạn sửa được một lỗi (bug) khó khiến cả hệ thống chạy ổn định trở lại. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q8" value="AI">
+                                (C) Mô hình dự đoán của bạn đạt độ chính xác 95%. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q9">
+                        <legend>Câu 9: Từ nào mô tả bạn rõ nhất?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q9" value="WEB">
+                                (A) Đồng cảm (Empathy) - Tôi dễ dàng đặt mình vào vị trí người dùng. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="UDPM">
+                                (B) Logic (Logical) - Tôi suy nghĩ mọi thứ theo quy trình 1-2-3. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="AI">
+                                (C) Tò mò (Curious) - Tôi luôn hỏi "Tại sao đằng sau nó lại như vậy?". (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q10">
+                        <legend>Câu 10: Bạn thích công cụ nào hơn?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q10" value="WEB">
+                                (A) Figma, Photoshop, các công cụ thiết kế giao diện. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="UDPM">
+                                (B) VS Code (để code), các công cụ quản lý cơ sở dữ liệu. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="AI">
+                                (C) Python, Bảng tính (Excel/Google Sheets) và các thư viện phân tích dữ liệu. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q11">
+                        <legend>Câu 11: Nếu áp dụng công nghệ cho nông nghiệp Tây Nguyên, bạn muốn:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q11" value="WEB">
+                                (A) Xây dựng một website E-commerce bán cà phê Buôn Ma Thuột với giao diện "chất". (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q11" value="UDPM">
+                                (B) Xây dựng một App quản lý kho, quản lý nhân công cho nông trại. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q11" value="AI">
+                                (C) Dùng AI phân tích hình ảnh lá cây để dự đoán sâu bệnh. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q12">
+                        <legend>Câu 12: Khi nghe "UX/UI", bạn nghĩ:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q12" value="WEB">
+                                (A) "Đó chính là tôi! Trải nghiệm người dùng là quan trọng nhất!" (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q12" value="UDPM">
+                                (B) "Cũng quan trọng, nhưng nó phải dựa trên một logic code vững chắc." (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q12" value="AI">
+                                (C) "Tôi không quan tâm lắm." (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q13">
+                        <legend>Câu 13: Khi nghe "Thuật toán và Cấu trúc dữ liệu", bạn nghĩ:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q13" value="WEB">
+                                (A) "Hơi đáng sợ, tôi thích kéo thả hơn." (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q13" value="UDPM">
+                                (B) "Đây là nền tảng! Phải giỏi cái này mới xây được hệ thống tốt." (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q13" value="AI">
+                                (C) "Rất thú vị, đây là cốt lõi để xây dựng các mô hình thông minh." (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q14">
+                        <legend>Câu 14: Khi nghe "Big Data (Dữ liệu lớn)", bạn nghĩ:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q14" value="WEB">
+                                (A) "Làm sao để 'trưng bày' (visualize) đống dữ liệu đó cho đẹp và dễ hiểu?" (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q14" value="UDPM">
+                                (B) "Làm sao để lưu trữ và truy vấn (query) đống dữ liệu đó cho nhanh?" (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q14" value="AI">
+                                (C) "Đây là mỏ vàng! Phải 'đào' (mining) ngay để tìm insight!" (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q15">
+                        <legend>Câu 15: Bạn thích công việc có kết quả:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q15" value="WEB">
+                                (A) Thấy ngay lập tức (Sửa code là thấy giao diện thay đổi). (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q15" value="UDPM">
+                                (B) Thấy được sự ổn định (Hệ thống chạy 1 tháng không lỗi). (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q15" value="AI">
+                                (C) Cần sự kiên nhẫn lâu dài (Huấn luyện mô hình mất 1 tuần mới có kết quả). (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q16">
+                        <legend>Câu 16: Khi làm việc nhóm, bạn thường là người:</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q16" value="WEB">
+                                (A) Đảm bảo sản phẩm cuối cùng trông chuyên nghiệp và thân thiện với người dùng. (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q16" value="UDPM">
+                                (B) Lên kế hoạch, chia việc, đảm bảo các phần code khớp với nhau. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q16" value="AI">
+                                (C) Đưa ra các phân tích, số liệu để cả nhóm ra quyết định. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="question-card" data-question="q17">
+                        <legend>Câu 17: Bạn có phải là người tỉ mỉ, để ý từng chi tiết nhỏ không?</legend>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="q17" value="WEB">
+                                (A) Rất tỉ mỉ, đặc biệt là về khoảng cách (căn lề), màu sắc (sai 1 pixel cũng thấy). (WEB)
+                            </label>
+                            <label>
+                                <input type="radio" name="q17" value="UDPM">
+                                (B) Tỉ mỉ về logic (sai một dấu chấm phẩy là lỗi), nhưng không quá quan tâm đến thẩm mỹ. (UDPM)
+                            </label>
+                            <label>
+                                <input type="radio" name="q17" value="AI">
+                                (C) Tỉ mỉ về số liệu (sai 0.1% cũng là vấn đề), nhưng không để ý đến giao diện. (AI)
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="quiz-actions">
+                        <button type="button" id="submit-btn" class="quiz-submit">Xem kết quả</button>
+                        <button type="reset" class="quiz-reset">Làm lại</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="result-card" class="quiz-result">
+            <div class="container">
+                <div id="result" class="result-card" aria-live="polite">
+                    <h3>Hãy trả lời hết 17 câu để xem gợi ý định hướng ngành dành cho bạn.</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="quiz-footer">
+        <div class="container">
+            <p>© 2024 FPT Polytechnic - Khám phá đam mê, chọn đúng chuyên ngành.</p>
+        </div>
+    </footer>
+
+    <script>
+        const trackProfiles = {
+            WEB: {
+                title: 'Thiết kế Website (Web)',
+                summary: 'Bạn thiên về Thiết kế Website với sự nhạy bén trong trải nghiệm người dùng và cảm quan thẩm mỹ.',
+                icon: '🎨',
+                color: '#FF6F00',
+                focus: [
+                    'Sáng tạo Trực quan (Visual Creativity)',
+                    'Đồng cảm Người dùng (User Empathy)',
+                    'Sự tỉ mỉ (Detail-Orientation)'
+                ]
+            },
+            UDPM: {
+                title: 'Ứng dụng Phần mềm (UDPM)',
+                summary: 'Bạn mạnh về xây dựng hệ thống ổn định, tư duy logic rõ ràng và triển khai quy trình cụ thể.',
+                icon: '⚙️',
+                color: '#2563eb',
+                focus: [
+                    'Tư duy Logic (Logical Thinking)',
+                    'Xây dựng Hệ thống (System Building)',
+                    'Giải quyết Vấn đề Cụ thể (Concrete Problem-Solving)'
+                ]
+            },
+            AI: {
+                title: 'Trí tuệ Nhân tạo (AI)',
+                summary: 'Bạn phù hợp với phân tích dữ liệu, nghiên cứu mô hình và suy nghĩ trừu tượng sâu sắc.',
+                icon: '🤖',
+                color: '#10b981',
+                focus: [
+                    'Tư duy Trừu tượng (Abstract Thinking)',
+                    'Phân tích Dữ liệu (Data Analysis)',
+                    'Kiên nhẫn Nghiên cứu (Research Patience)'
+                ]
+            }
+        };
+
+        const resultElement = document.getElementById('result');
+        const quizForm = document.getElementById('quiz-form');
+        const progressFill = document.getElementById('progress-fill');
+        const progressCount = document.getElementById('progress-count');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const totalQuestions = 17;
+
+        // Update progress bar
+        function updateProgress() {
+            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
+            const percentage = Math.round((answered / totalQuestions) * 100);
+
+            progressFill.style.width = percentage + '%';
+            progressCount.textContent = answered;
+            progressPercentage.textContent = percentage + '%';
+        }
+
+        // Listen to all radio button changes
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+
+        function renderResult(content) {
+            resultElement.innerHTML = content;
+            // Scroll to result
+            document.getElementById('result-card').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderFocusList(trackKey) {
+            const { focus } = trackProfiles[trackKey];
+            return focus.map(item => `<li>${item}</li>`).join('');
+        }
+
+        function renderChart(scores) {
+            const maxScore = Math.max(...Object.values(scores));
+            return `
+                <div class="score-chart">
+                    <h4>Phân tích điểm số của bạn:</h4>
+                    ${Object.entries(scores).map(([key, score]) => {
+                        const profile = trackProfiles[key];
+                        const percentage = (score / totalQuestions) * 100;
+                        const barWidth = maxScore > 0 ? (score / maxScore) * 100 : 0;
+                        return `
+                            <div class="chart-item">
+                                <div class="chart-label">
+                                    <span class="chart-icon">${profile.icon}</span>
+                                    <span class="chart-name">${profile.title}</span>
+                                    <span class="chart-score">${score}/${totalQuestions} (${percentage.toFixed(0)}%)</span>
+                                </div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar" style="width: ${barWidth}%; background: ${profile.color}"></div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        function formatScoreLine(scores) {
+            const labels = {
+                WEB: 'Web',
+                UDPM: 'UDPM',
+                AI: 'AI'
+            };
+            return Object.entries(scores)
+                .map(([key, score]) => `${labels[key]}: ${score}`)
+                .join(' | ');
+        }
+
+        document.getElementById('submit-btn').addEventListener('click', () => {
+            const scores = { WEB: 0, UDPM: 0, AI: 0 };
+            const unanswered = [];
+
+            document.querySelectorAll('.question-card').forEach(fieldset => {
+                const questionName = fieldset.dataset.question;
+                const selected = fieldset.querySelector(`input[name="${questionName}"]:checked`);
+
+                if (!selected) {
+                    unanswered.push(questionName);
+                    return;
+                }
+
+                scores[selected.value] += 1;
+            });
+
+            if (unanswered.length > 0) {
+                renderResult('<h3>Vui lòng trả lời tất cả câu hỏi trước khi xem kết quả.</h3>');
+                return;
+            }
+
+            const scoreEntries = Object.entries(scores);
+            const maxScore = Math.max(...scoreEntries.map(([, score]) => score));
+            const topTracks = scoreEntries
+                .filter(([, score]) => score === maxScore)
+                .map(([track]) => track);
+
+            const scoreLine = formatScoreLine(scores);
+
+            // Render chart first
+            const chartHTML = renderChart(scores);
+
+            if (topTracks.length === 1) {
+                const trackKey = topTracks[0];
+                const profile = trackProfiles[trackKey];
+                renderResult(`
+                    <div class="result-header">
+                        <span class="result-icon">${profile.icon}</span>
+                        <h3>Ngành phù hợp nhất: ${profile.title}</h3>
+                    </div>
+                    <p class="result-summary">${profile.summary}</p>
+                    <div class="result-focus">
+                        <p><strong>Thế mạnh nổi bật:</strong></p>
+                        <ul>${renderFocusList(trackKey)}</ul>
+                    </div>
+                    ${chartHTML}
+                `);
+                return;
+            }
+
+            const recommendations = topTracks
+                .map(track => {
+                    const profile = trackProfiles[track];
+                    return `
+                        <div class="tie-option">
+                            <div class="tie-header">
+                                <span class="tie-icon">${profile.icon}</span>
+                                <h4>${profile.title}</h4>
+                            </div>
+                            <p>${profile.summary}</p>
+                            <ul>${renderFocusList(track)}</ul>
+                        </div>
+                    `;
+                })
+                .join('');
+
+            renderResult(`
+                <h3>Bạn đang cân bằng giữa nhiều thế mạnh!</h3>
+                <p class="result-summary">Các lựa chọn dưới đây đều phù hợp với bạn, hãy cân nhắc theo sở thích cá nhân:</p>
+                <div class="tie-container">${recommendations}</div>
+                ${chartHTML}
+            `);
+        });
+
+        quizForm.addEventListener('reset', () => {
+            renderResult('<h3>Hãy trả lời hết 17 câu để xem gợi ý định hướng ngành dành cho bạn.</h3>');
+            // Reset progress bar
+            setTimeout(() => {
+                updateProgress();
+            }, 100);
+        });
+    </script>
+</body>
+</html>
