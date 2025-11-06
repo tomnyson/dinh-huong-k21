@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lộ Trình Lập Trình Web | FPT Polytechnic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>FPT Polytechnic</h1>
+            </div>
+            <nav class="nav">
+                <a href="#gioi-thieu">Giới thiệu</a>
+                <a href="#lo-trinh">Lộ trình</a>
+                <a href="#showcase">Dự án sinh viên</a>
+                <a href="#thong-tin">Nghề nghiệp</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Định Hướng Chương Trình Khóa K21</h2>
+            <h3>Lập Trình Web</h3>
+            <p class="hero-subtitle">Khóa k21 - Chuyên ngành CNTT</p>
+        </div>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section id="gioi-thieu" class="intro">
+        <div class="container">
+            <h2>Giới Thiệu Chương Trình</h2>
+            <div class="intro-content">
+                <div class="intro-item">
+                    <div class="icon">🎓</div>
+                    <h4>Thời gian đào tạo</h4>
+                    <p>2 năm</p>
+                </div>
+                <div class="intro-item">
+                    <div class="icon">📚</div>
+                    <h4>Tổng số tín chỉ</h4>
+                    <p>120 tín chỉ</p>
+                </div>
+                <div class="intro-item">
+                    <div class="icon">💼</div>
+                    <h4>Nghề nghiệp</h4>
+                    <p>Web Developer, Full-stack Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lộ trình học -->
+    <section id="lo-trinh" class="roadmap">
+        <div class="container">
+            <h2>Lộ Trình Chương Trình Học</h2>
+
+            <!-- Học kỳ 1 -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(1)">
+                    <h3>Học Kỳ 1 - Nền Tảng Cơ Bản</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-1">
+                    <div class="course" data-course-id="PDP102">
+                        <div class="course-code">PDP102</div>
+                        <div class="course-info">
+                            <h4>Kỹ năng học tập</h4>
+                            <p>Phát triển kỹ năng học tập hiệu quả</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PDP102')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">16 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="COM1071">
+                        <div class="course-code">COM1071</div>
+                        <div class="course-info">
+                            <h4>Tin học</h4>
+                            <p>Kiến thức nền tảng về máy tính và công nghệ thông tin</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('COM1071')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="COM108">
+                        <div class="course-code">COM108</div>
+                        <div class="course-info">
+                            <h4>Nhập môn lập trình</h4>
+                            <p>Tư duy lập trình và thuật toán cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('COM108')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="IT101">
+                        <div class="course-code">IT101</div>
+                        <div class="course-info">
+                            <h4>Nhập môn Công nghệ thông tin</h4>
+                            <p>Giới thiệu về ngành CNTT và các lĩnh vực</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('IT101')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="ENT1128">
+                        <div class="course-code">ENT1128</div>
+                        <div class="course-info">
+                            <h4>Tiếng Anh 1.1</h4>
+                            <p>Tiếng Anh giao tiếp cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('ENT1128')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="VIE103">
+                        <div class="course-code">VIE103</div>
+                        <div class="course-info">
+                            <h4>Giáo dục thể chất - Vovinam</h4>
+                            <p>Rèn luyện sức khỏe và võ thuật Vovinam</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('VIE103')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">2 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Học kỳ 2 -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(2)">
+                    <h3>Học Kỳ 2 - Phát Triển Web Cơ Bản</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-2">
+                    <div class="course" data-course-id="WEB1013">
+                        <div class="course-code">WEB1013</div>
+                        <div class="course-info">
+                            <h4>Xây dựng trang Web</h4>
+                            <p>HTML, CSS và xây dựng website cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB1013')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB108">
+                        <div class="course-code">WEB108</div>
+                        <div class="course-info">
+                            <h4>Lập trình PHP cơ bản</h4>
+                            <p>Cú pháp PHP, biến, mảng, functions</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB108')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="COM2012">
+                        <div class="course-code">COM2012</div>
+                        <div class="course-info">
+                            <h4>Cơ sở dữ liệu</h4>
+                            <p>SQL, MySQL, thiết kế database</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('COM2012')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB1043">
+                        <div class="course-code">WEB1043</div>
+                        <div class="course-info">
+                            <h4>Lập trình cơ sở với JavaScript</h4>
+                            <p>JavaScript fundamentals, DOM, Events</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB1043')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="ENT1227">
+                        <div class="course-code">ENT1227</div>
+                        <div class="course-info">
+                            <h4>Tiếng Anh 1.2</h4>
+                            <p>Tiếng Anh giao tiếp nâng cao</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('ENT1227')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="VIE1026">
+                        <div class="course-code">VIE1026</div>
+                        <div class="course-info">
+                            <h4>Pháp luật</h4>
+                            <p>Kiến thức pháp luật cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('VIE1026')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">2 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Học kỳ 3 -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(3)">
+                    <h3>Học Kỳ 3 - Phát Triển PHP & UI/UX</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-3">
+                    <div class="course" data-course-id="WEB2014">
+                        <div class="course-code">WEB2014</div>
+                        <div class="course-info">
+                            <h4>Lập trình PHP 1</h4>
+                            <p>PHP nâng cao, OOP, kết nối database</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2014')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB105">
+                        <div class="course-code">WEB105</div>
+                        <div class="course-info">
+                            <h4>Thiết kế UI/UX</h4>
+                            <p>User Interface và User Experience Design</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB105')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB1022">
+                        <div class="course-code">WEB1022</div>
+                        <div class="course-info">
+                            <h4>Quản trị website</h4>
+                            <p>CMS, WordPress, quản lý nội dung web</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB1022')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB2041">
+                        <div class="course-code">WEB2041</div>
+                        <div class="course-info">
+                            <h4>Dự án mẫu (TKTW)</h4>
+                            <p>Thiết kế thi công website mẫu</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2041')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="ENT2127">
+                        <div class="course-code">ENT2127</div>
+                        <div class="course-info">
+                            <h4>Tiếng Anh 2.1</h4>
+                            <p>Tiếng Anh chuyên ngành IT</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('ENT2127')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PDP103">
+                        <div class="course-code">PDP103</div>
+                        <div class="course-info">
+                            <h4>Kỹ năng phát triển bản thân</h4>
+                            <p>Phát triển năng lực cá nhân</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PDP103')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">2 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Học kỳ 4 -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(4)">
+                    <h3>Học Kỳ 4 - JavaScript & Front-end Frameworks</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-4">
+                    <div class="course" data-course-id="WEB2053">
+                        <div class="course-code">WEB2053</div>
+                        <div class="course-info">
+                            <h4>Marketing trên Internet</h4>
+                            <p>Digital Marketing, SEO, Social Media Marketing</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2053')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB2063">
+                        <div class="course-code">WEB2063</div>
+                        <div class="course-info">
+                            <h4>Lập trình JavaScript nâng cao</h4>
+                            <p>ES6+, Async/Await, Promises, APIs</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2063')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PRO1014">
+                        <div class="course-code">PRO1014</div>
+                        <div class="course-info">
+                            <h4>Dự án 1 (TKTW)</h4>
+                            <p>Dự án thiết kế thi công website thực tế</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PRO1014')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB2071">
+                        <div class="course-code">WEB2071</div>
+                        <div class="course-info">
+                            <h4>Front-End Frameworks</h4>
+                            <p>React, Vue.js, Angular cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2071')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB503">
+                        <div class="course-code">WEB503</div>
+                        <div class="course-info">
+                            <h4>NodeJS & Restful Web Service</h4>
+                            <p>Server-side JavaScript, RESTful API</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB503')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="ENT2227">
+                        <div class="course-code">ENT2227</div>
+                        <div class="course-info">
+                            <h4>Tiếng Anh 2.2</h4>
+                            <p>Tiếng Anh giao tiếp trong công việc</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('ENT2227')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Học kỳ 5 -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(5)">
+                    <h3>Học Kỳ 5 - Full-stack & Advanced Technologies</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-5">
+                    <div class="course" data-course-id="WEB3014">
+                        <div class="course-code">WEB3014</div>
+                        <div class="course-info">
+                            <h4>Lập trình PHP 2</h4>
+                            <p>Laravel Framework, MVC, Advanced PHP</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB3014')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB502">
+                        <div class="course-code">WEB502</div>
+                        <div class="course-info">
+                            <h4>Lập trình TypeScript</h4>
+                            <p>TypeScript fundamentals, Types, Interfaces</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB502')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PMA1011">
+                        <div class="course-code">PMA1011</div>
+                        <div class="course-info">
+                            <h4>Quản lý dự án với Agile</h4>
+                            <p>Scrum, Kanban, Agile methodology</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PMA1011')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB2081">
+                        <div class="course-code">WEB2081</div>
+                        <div class="course-info">
+                            <h4>Lập trình Front-End Framework 1</h4>
+                            <p>React/Vue.js nâng cao, State Management</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2081')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB4014">
+                        <div class="course-code">WEB4014</div>
+                        <div class="course-info">
+                            <h4>Lập trình PHP 3</h4>
+                            <p>Advanced Laravel, API Development</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB4014')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="WEB2091">
+                        <div class="course-code">WEB2091</div>
+                        <div class="course-info">
+                            <h4>Lập trình Front-End Framework 2</h4>
+                            <p>Advanced React/Vue.js, SSR, Testing</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('WEB2091')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">3 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="VIE108">
+                        <div class="course-code">VIE108</div>
+                        <div class="course-info">
+                            <h4>Giáo dục Chính trị</h4>
+                            <p>Kiến thức chính trị cơ bản</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('VIE108')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">5 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PDP104">
+                        <div class="course-code">PDP104</div>
+                        <div class="course-info">
+                            <h4>Kỹ năng làm việc</h4>
+                            <p>Kỹ năng mềm trong công việc</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PDP104')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">2 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Học song song -->
+            <div class="semester">
+                <div class="semester-header" onclick="toggleSemester(6)">
+                    <h3>Học Song Song - Thực Tập & Tốt Nghiệp</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="semester-content active" id="semester-6">
+                    <div class="course" data-course-id="PRO116">
+                        <div class="course-code">PRO116</div>
+                        <div class="course-info">
+                            <h4>Thực tập tốt nghiệp (TKTW)</h4>
+                            <p>Thực tập tại doanh nghiệp</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PRO116')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">5 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PRO224">
+                        <div class="course-code">PRO224</div>
+                        <div class="course-info">
+                            <h4>Dự án tốt nghiệp (TKTW-PHP Framework)</h4>
+                            <p>Dự án tốt nghiệp với PHP Framework</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PRO224')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">5 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="PRO220">
+                        <div class="course-code">PRO220</div>
+                        <div class="course-info">
+                            <h4>Dự án tốt nghiệp (TKTW-Single Page Application)</h4>
+                            <p>Dự án tốt nghiệp với SPA (React/Vue)</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('PRO220')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">5 tín chỉ</div>
+                    </div>
+                    <div class="course" data-course-id="VIE104">
+                        <div class="course-code">VIE104</div>
+                        <div class="course-info">
+                            <h4>Giáo dục quốc phòng</h4>
+                            <p>Kiến thức quốc phòng và an ninh</p>
+                            <button class="btn-syllabus" onclick="openSyllabus('VIE104')">📋 Xem Syllabus</button>
+                        </div>
+                        <div class="course-credits">4 tín chỉ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase - Dự án sinh viên -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <h2>Dự Án Sinh Viên Xuất Sắc</h2>
+            <p class="showcase-subtitle">Những sản phẩm thực tế được phát triển bởi sinh viên chuyên ngành Lập Trình Web</p>
+
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/kye-RIUyxSo"
+                            title="Dự án sinh viên 1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Website Thương Mại Điện Tử</h4>
+                        <p>Nền tảng mua sắm trực tuyến với đầy đủ tính năng</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/sKfFA_RlSjg?si=nmGJHTf4Fi0ytX0u"
+                            title="Dự án sinh viên 2"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Ứng Dụng Quản Lý</h4>
+                        <p>Hệ thống quản lý với giao diện hiện đại</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/paAfbFSoazA"
+                            title="Dự án sinh viên 3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Website Giáo Dục</h4>
+                        <p>Nền tảng học tập trực tuyến tương tác</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/SHzQhQoGF80"
+                            title="Dự án sinh viên 4"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Portfolio Website</h4>
+                        <p>Website giới thiệu cá nhân chuyên nghiệp</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/jjlBNMveaEA"
+                            title="Dự án sinh viên 5"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Ứng Dụng Booking</h4>
+                        <p>Hệ thống đặt lịch và quản lý</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thông tin thêm -->
+    <section id="thong-tin" class="info">
+        <div class="container">
+            <h2>Sự Nghiệp & Cơ Hội Việc Làm</h2>
+            <p class="career-subtitle">Sau khi tốt nghiệp, sinh viên có thể làm việc tại các công ty công nghệ hàng đầu với mức lương hấp dẫn</p>
+
+            <div class="career-stats">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Tỷ lệ có việc làm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8-25 triệu</div>
+                    <div class="stat-label">Mức lương khởi điểm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Đối tác tuyển dụng</div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Vị Trí Tuyển Dụng Phổ Biến</h3>
+            <div class="job-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">🎨</div>
+                        <div class="job-salary">8-12 triệu/tháng</div>
+                    </div>
+                    <h4>Junior Front-end Developer</h4>
+                    <p class="job-company">Công ty TNHH Công Nghệ ABC</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>HTML, CSS, JavaScript cơ bản</li>
+                            <li>Responsive Design</li>
+                            <li>Git version control</li>
+                            <li>React hoặc Vue.js là lợi thế</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 Hà Nội / TP.HCM</div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">⚡</div>
+                        <div class="job-salary">10-15 triệu/tháng</div>
+                    </div>
+                    <h4>PHP/Laravel Developer</h4>
+                    <p class="job-company">Công ty CP Phần Mềm XYZ</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>PHP OOP, Laravel Framework</li>
+                            <li>MySQL, database design</li>
+                            <li>RESTful API development</li>
+                            <li>Kinh nghiệm 6 tháng - 1 năm</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 Hà Nội / Đà Nẵng</div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">🚀</div>
+                        <div class="job-salary">12-18 triệu/tháng</div>
+                    </div>
+                    <h4>Full-stack JavaScript Developer</h4>
+                    <p class="job-company">Startup Công Nghệ DEF</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>React/Vue.js + Node.js</li>
+                            <li>MongoDB hoặc PostgreSQL</li>
+                            <li>RESTful & GraphQL APIs</li>
+                            <li>Kinh nghiệm 1-2 năm</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 TP.HCM / Remote</div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">🎭</div>
+                        <div class="job-salary">9-14 triệu/tháng</div>
+                    </div>
+                    <h4>UI/UX Designer</h4>
+                    <p class="job-company">Agency Thiết Kế GHI</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>Figma, Adobe XD</li>
+                            <li>User Research & Wireframing</li>
+                            <li>HTML/CSS cơ bản</li>
+                            <li>Portfolio design projects</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 Hà Nội / TP.HCM</div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">🌐</div>
+                        <div class="job-salary">8-13 triệu/tháng</div>
+                    </div>
+                    <h4>WordPress Developer</h4>
+                    <p class="job-company">Công ty Digital Marketing JKL</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>WordPress theme & plugin development</li>
+                            <li>PHP, JavaScript, jQuery</li>
+                            <li>WooCommerce, Elementor</li>
+                            <li>SEO basic knowledge</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 Hà Nội / Remote</div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div class="job-icon">🔧</div>
+                        <div class="job-salary">10-16 triệu/tháng</div>
+                    </div>
+                    <h4>Junior DevOps Engineer</h4>
+                    <p class="job-company">Công ty Outsourcing MNO</p>
+                    <div class="job-requirements">
+                        <p><strong>Yêu cầu:</strong></p>
+                        <ul>
+                            <li>Linux administration</li>
+                            <li>Docker, CI/CD basics</li>
+                            <li>AWS hoặc Azure fundamentals</li>
+                            <li>Scripting với Bash/Python</li>
+                        </ul>
+                    </div>
+                    <div class="job-location">📍 TP.HCM / Đà Nẵng</div>
+                </div>
+            </div>
+
+            <div class="career-path">
+                <h3 class="section-title">Lộ Trình Thăng Tiến</h3>
+                <div class="path-timeline">
+                    <div class="path-item">
+                        <div class="path-year">Năm 1-2</div>
+                        <div class="path-role">Junior Developer</div>
+                        <div class="path-salary">8-15 triệu</div>
+                    </div>
+                    <div class="path-arrow">→</div>
+                    <div class="path-item">
+                        <div class="path-year">Năm 2-4</div>
+                        <div class="path-role">Mid-level Developer</div>
+                        <div class="path-salary">15-25 triệu</div>
+                    </div>
+                    <div class="path-arrow">→</div>
+                    <div class="path-item">
+                        <div class="path-year">Năm 4-6</div>
+                        <div class="path-role">Senior Developer</div>
+                        <div class="path-salary">25-40 triệu</div>
+                    </div>
+                    <div class="path-arrow">→</div>
+                    <div class="path-item">
+                        <div class="path-year">Năm 6+</div>
+                        <div class="path-role">Tech Lead / Architect</div>
+                        <div class="path-salary">40-70 triệu</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="career-cta">
+                <h3>Sẵn sàng bắt đầu hành trình của bạn?</h3>
+                <p>Tham gia chương trình Lập Trình Web tại FPT Polytechnic và mở ra cơ hội nghề nghiệp rộng mở</p>
+                <a href="https://caodang.fpt.edu.vn/" target="_blank" class="btn-cta">Tư vấn tuyển sinh</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Syllabus Modal -->
+    <div id="syllabusModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Chi tiết môn học</h3>
+                <span class="close" onclick="closeSyllabus()">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FPT Polytechnic. All rights reserved.</p>
+            <p>Chương trình Lập Trình Web - Khóa K213</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
